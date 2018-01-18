@@ -1,4 +1,18 @@
-#song-list {
+img {
+  margin: 10px;
+  margin-top: 50px;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.info{
+color: white;
+display:inline-block;
+padding:10px;
+}
+
+ #song-list {
   border-collapse: collapse;
   clear: both;
   font-weight: 100;
@@ -25,7 +39,7 @@ tr:focus {
 }
 
 tr:hover .ion-play,
-tr.playing .ion-pause,
+tr.playing:hover .ion-pause,
 tr.paused .ion-play {
   display: block;
 }
@@ -40,13 +54,17 @@ tr.paused .song-number {
   display: none;
 }
 
-tr:hover {
+ tr.playing:hover .ion-pause{
+  display: block;
+}
+
+ tr:hover {
   background: hsla(0, 0%, 0%, 0.05);
   cursor: pointer;
 }
 
-tr.playing {
-  background: hsla(0, 0%, 0%, 0.1);
+tr.play-pause {
+  background: hsla(0, 0%, 0%, 0.5);
 }
 
 tr:hover .song-title {
@@ -88,7 +106,6 @@ tr.playing button:focus .ion-play {
 tr.playing button:focus .ion-pause {
   display: block;
 }
-
 
 .song-number {
   color: hsla(0, 0%, 100%, 0.66);

@@ -1,18 +1,20 @@
-#player-bar {
+/* #player-bar {
   background: hsla(0, 0%, 0%, 0.1);
   bottom: 0;
   height: 100px;
   position: fixed;
   width: 100%;
-}
+  margin: 20px;
+} */
 
-#buttons {
+/* #buttons {
+  color:white;
   width: 300px;
   margin: auto;
   text-align: center;
-}
+} */
 
-#buttons button {
+/* #buttons button {
   border: none;
   background: none;
   color: white;
@@ -20,35 +22,35 @@
   color: hsla(0, 0%, 100%, 0.5);
   transition: all 0.2s ease;
   cursor: pointer;
-}
+} */
 
-#buttons button:hover, #buttons button:focus {
+/* #buttons button:hover, #buttons button:focus {
   outline: none;
   color: hsla(0, 0%, 100%, 1);
   text-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
-}
+} */
 
-#buttons #play-pause {
+/* #buttons #play-pause {
   color: hsla(0, 0%, 100%, 0.8);
   font-size: 2rem;
   margin: 0.5rem 1rem 0;
   transform: translateY(0.3rem);
-}
+} */
 
-#buttons #play-pause:hover {
+/* #buttons #play-pause:hover {
   color: hsla(0, 0%, 100%, 1);
+} */
+
+/* #play-pause .ion-pause {
+  display: block;
 }
 
-#play-pause .ion-pause {
-  display: none;
-}
-
-#play-pause[playState="playing"] .ion-pause {
+#play-pause[playState="isPlaying"] .ion-pause {
   display: block;
 }
 
 #play-pause[playState="playing"] .ion-play {
-  display: none;
+  display: block;
 }
 
 #time-control input {
@@ -58,14 +60,14 @@
 
 #time-control {
   margin: 0.5rem auto;
-  /* max-width: 640px; */
+  /* max-width: 640px;
   width: 50%;
-}
+} */
 
-#time-control div,
+/*#time-control div,
 #volume-control div {
   font-size: 0.8rem;
-  color: hsla(0, 0%, 100%, 0.4);
+  color: hsla(0, 0%, 100%, 0.6);
   width: 35px;
   display: block;
   float: left;
@@ -75,22 +77,22 @@
 #volume-control div {
   font-size: 0.9rem;
   width: 20px;
-}
+} */
 
-#volume-control {
+/* #volume-control {
   transform: translateY(-50%);
   top: 66%;
   position: absolute;
   right: 2rem;
   width: 15%;
-}
+} */
 
-#volume-control input {
+  /* #volume-control input {
   float: left;
   width: calc(100% - 40px);
-}
+} */
 
-input[type=range] {
+/* input[type=range] {
   -webkit-appearance: none;
   background: none;
   margin-top: 7px;
@@ -172,4 +174,4 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(13, 13, 13, 0.4);
-}
+} */
