@@ -39,7 +39,7 @@ tr:focus {
 }
 
 tr:hover .ion-play,
-tr.playing:hover .ion-pause,
+tr.isPlaying:hover .ion-pause,
 tr.paused .ion-play {
   display: block;
 }

@@ -6,5 +6,8 @@ body{
 }
 .hero-title {
   font-size: 150px;
+  color: black;
+}
+.selling-points {
   color: white;
 }

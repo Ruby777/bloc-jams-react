@@ -42,12 +42,12 @@ class Album extends Component {
     this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
   }
 
-  play() {
+  play(song) {
     this.audioElement.play();
     this.setState({ isPlaying: true });
   }
 
-  pause(){
+  pause(song){
      this.audioElement.pause();
      this.setState({ isPlaying: false });
    }
