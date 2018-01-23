@@ -27,6 +27,9 @@ padding:10px;
 #song-duration-column {
   width: 80px;
 }
+#play-pause:click tr.song .ion-play {
+   display: block;
+}
 
 tr {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
@@ -38,8 +41,46 @@ tr:focus {
   outline: aliceblue;
 }
 
-tr:hover .ion-play,
-tr.isPlaying:hover .ion-pause,
+tr:hover.ion-play{
+  display: block;
+}
+tr button .ion-play {
+opacity:0;
+}
+
+tr.song-number{
+  display: block;
+}
+
+
+
+tr:hover .song-number{
+  display: none;
+}
+
+tr button:focus .song-number{
+  display: none
+}
+
+tr .playing:hover .ion-pause{
+  display:block;
+}
+
+tr button .playing:hover .ion-pause{
+ display: block;
+}
+
+tr button .paused:hover .ion-play{
+  display: block;
+}
+
+tr .song.play-pause {
+
+}
+
+
+/* tr:hover .ion-play,
+tr.song:hover .ion-pause,
 tr.paused .ion-play {
   display: block;
 }
@@ -54,9 +95,7 @@ tr.paused .song-number {
   display: none;
 }
 
- tr.playing:hover .ion-pause{
-  display: block;
-}
+
 
  tr:hover {
   background: hsla(0, 0%, 0%, 0.05);
@@ -118,4 +157,4 @@ tr.playing button:focus .ion-pause {
 .song-duration {
   color: hsla(0, 0%, 100%, 0.5);
   text-align: right;
-}
+} */
