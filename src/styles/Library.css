@@ -31,33 +31,45 @@ padding:10px;
    display: block;
 }
 
-tr {
+tr.song {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
   background: hsla(0, 0%, 0%, 0.01);
   transition: all 0.2s ease;
-}
-
-tr:focus {
-  outline: aliceblue;
-}
-
-tr:hover .song-number{
-  display: none;
 }
 
 tr .ion-play{
   display: none;
 }
 
-tr.playing button:focus .ion-pause {
+tr:focus {
+  outline: aliceblue;
+}
+
+tr.song:hover .song-number{
+  display: none;
+}
+
+tr:hover .ion-play{
   display: block;
 }
 
-tr .playing:hover .ion-play{
+tr.song.playing .song-number{
+  display: none;
+}
+
+tr.playing button:focus .ion-pause{
+  display: block;
+}
+
+tr.playing:hover .ion-play{
    display:none;
  }
 
-tr .playing:hover button .ion-pause{
+ /* tr.songpaused .ion-play{
+   display: block;
+ } */
+
+tr.playing:hover button .ion-pause{
    display:block;
  }
 
