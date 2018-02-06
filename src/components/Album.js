@@ -128,22 +128,25 @@ class Album extends Component {
          </colgroup>
          <tbody>
            {
-           this.state.album.songs.map((song, index) =>
+           this.state.album.songs.map(function(song, index) {
 
-             let rowClassName;
-
+              let rowClassName;
+             //
              // Check if the active song in our state matches the song we are
              // currently looping over.
-             if (this.state.currentSong == song) {
+                if (this.state.currentSong == song) {
+
                // It's a match, so set this row's class to playing or paused
                // based on whether the song is actively playing.
-               rowClassName = this.state.isPlaying ? 'playing' : 'paused';
-             } else {
-               // If the current song is not the one we're looping over, it
-               // doesn't matter if it's playing or not because we don't care
-               // about it, so it gets no special class name.
-               rowClassName = '';
+                let rowClassName = this.state.isPlaying ? 'playing' : 'paused';
              }
+              else {
+             //
+             //   // If the current song is not the one we're looping over, it
+             //   // doesn't matter if it's playing or not because we don't care
+             //   // about it, so it gets no special class name.
+              rowClassName = '';
+              }
 
              // This table row can have one of three classes:
              //   - song
@@ -154,12 +157,13 @@ class Album extends Component {
                 <button>
                   <span className="song-number">{index + 1}</span>
                   <span className={this.state.isPlaying && this.state.currentSong == song ? 'ion-pause' : 'ion-play' }></span>
-               </button>
+                </button>
               </td>
               <td className="song-title">{song.title}</td>
               <td className="song-duration">{this.formatTime(song.duration)}</td>
              </tr>
-           )}
+            }
+          )}
          </tbody>
         </table>
         <PlayerBar
