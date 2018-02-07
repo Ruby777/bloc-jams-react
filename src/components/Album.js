@@ -139,7 +139,7 @@ class Album extends Component {
                // It's a match, so set this row's class to playing or paused
                // based on whether the song is actively playing.
                 let rowClassName = this.state.isPlaying ? 'playing' : 'paused';
-             }
+                }
               else {
              //
              //   // If the current song is not the one we're looping over, it
