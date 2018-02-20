@@ -128,30 +128,14 @@ class Album extends Component {
          </colgroup>
          <tbody>
            {
-           this.state.album.songs.map(function(song, index) {
+           this.state.album.songs.map((song, index) => {
+                  if (this.state.currentSong == song){
+                     return let rowClassName = this.state.isPlaying ? 'playing' : 'paused';
 
-              let rowClassName;
-             //
-             // Check if the active song in our state matches the song we are
-             // currently looping over.
-                if (this.state.currentSong == song) {
-
-               // It's a match, so set this row's class to playing or paused
-               // based on whether the song is actively playing.
-                let rowClassName = this.state.isPlaying ? 'playing' : 'paused';
-                }
-              else {
-             //
-             //   // If the current song is not the one we're looping over, it
-             //   // doesn't matter if it's playing or not because we don't care
-             //   // about it, so it gets no special class name.
-              rowClassName = '';
-              }
-
-             // This table row can have one of three classes:
-             //   - song
-             //   - song playing
-             //   - song paused
+                  } else {
+                     return rowClassName ='';
+                   }
+                  }
              <tr className={"song " + rowClassName} key={index} onClick={() => this.handleSongClick(song)} >
               <td className="song-actions">
                 <button>
@@ -162,7 +146,6 @@ class Album extends Component {
               <td className="song-title">{song.title}</td>
               <td className="song-duration">{this.formatTime(song.duration)}</td>
              </tr>
-            }
           )}
          </tbody>
         </table>
