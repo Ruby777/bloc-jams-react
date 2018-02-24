@@ -109,6 +109,16 @@ class Album extends Component {
        return minutes + ':' + seconds || "-:--";
   }
 
+  getRowClassName(song) {
+    let rowClassName;
+    if (this.state.currentSong == song){
+      rowClassName = this.state.isPlaying ? 'playing' : 'paused';
+    } else {
+      rowClassName ='';
+    }
+    return rowClassName;
+  }
+
   render() {
     return (
       <section className="album">
@@ -121,32 +131,26 @@ class Album extends Component {
           </div>
         </section>
         <table id="song-list">
-         <colgroup>
-          <col id="song-number-column" />
-          <col id="song-title-column" />
-          <col id="song-duration-column" />
-         </colgroup>
-         <tbody>
-           {
-           this.state.album.songs.map((song, index) => {
-                  if (this.state.currentSong == song){
-                     return let rowClassName = this.state.isPlaying ? 'playing' : 'paused';
-
-                  } else {
-                     return rowClassName ='';
-                   }
-                  }
-             <tr className={"song " + rowClassName} key={index} onClick={() => this.handleSongClick(song)} >
-              <td className="song-actions">
-                <button>
-                  <span className="song-number">{index + 1}</span>
-                  <span className={this.state.isPlaying && this.state.currentSong == song ? 'ion-pause' : 'ion-play' }></span>
-                </button>
-              </td>
-              <td className="song-title">{song.title}</td>
-              <td className="song-duration">{this.formatTime(song.duration)}</td>
-             </tr>
-          )}
+          <colgroup>
+            <col id="song-number-column" />
+            <col id="song-title-column" />
+            <col id="song-duration-column" />
+          </colgroup>
+        <tbody>
+          {
+            this.state.album.songs.map((song, index) => 
+              <tr className={"song " + this.getRowClassName(song)} key={index} onClick={() => this.handleSongClick(song)} >
+                <td className="song-actions">
+                  <button>
+                    <span className="song-number">{index + 1}</span>
+                    <span className={this.state.isPlaying && this.state.currentSong == song ? 'ion-pause' : 'ion-play' }></span>
+                  </button>
+                </td>
+                <td className="song-title">{song.title}</td>
+                <td className="song-duration">{this.formatTime(song.duration)}</td>
+              </tr>
+            )
+          }
          </tbody>
         </table>
         <PlayerBar
