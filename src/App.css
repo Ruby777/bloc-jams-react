@@ -26,3 +26,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.ion-ios-home{
+  margin:20px;
+  padding:20px;
+  font-size:20px;
+  color: black;
+}
+.ion-ipod {
+  margin:20px;
+  padding:20px;
+  font-size:20px;
+  color: black;
+}

@@ -11,8 +11,12 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-           <Link to='/'>Landing</Link>
-           <Link to='/library'>Library</Link>
+           <span className="ion-ios-home">
+            <Link to='/'>Home</Link>
+           </span>
+           <span className="ion-ipod">
+             <Link to='/library'>Library</Link>
+           </span>
           </nav>
           <h1>Bloc Jams</h1>
         </header>

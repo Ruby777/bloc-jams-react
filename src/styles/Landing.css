@@ -1,0 +1,13 @@
+body{
+  font-family: 'Lobster';
+  background-image: url("/assets/images/javier-allegue-barros-406855.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-title {
+  font-size: 150px;
+  color: black;
+}
+.selling-points {
+  color: white;
+}

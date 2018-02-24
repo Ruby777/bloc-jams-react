@@ -1,0 +1,70 @@
+img {
+  margin: 10px;
+  margin-top: 50px;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+}
+
+.info{
+color: white;
+display:inline-block;
+padding:10px;
+}
+
+#song-list {
+  border-collapse: collapse;
+  clear: both;
+  font-weight: 100;
+  margin-top: 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+#song-number-column {
+  width: 40px;
+}
+#song-duration-column {
+  width: 80px;
+}
+
+tr.song {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  background: hsla(0, 0%, 0%, 0.01);
+  transition: all 0.2s ease;
+}
+
+tr .ion-play{
+  display: none;
+}
+
+tr:focus {
+  outline: aliceblue;
+}
+
+tr.song:hover .song-number{
+  display: none;
+}
+
+tr:hover .ion-play{
+  display: block;
+}
+
+tr.song.playing .song-number{
+  display: none;
+}
+
+tr.playing:hover .ion-play{
+   display:none;
+ }
+
+ tr.song.paused .song-number{
+  display: none;
+}
+ tr.song.paused .ion-play{
+   display: block;
+ }
+
+tr.playing:hover button .ion-pause{
+   display:block;
+ }
