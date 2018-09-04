@@ -18,7 +18,7 @@ class App extends Component {
              <Link to='/library'>Library</Link>
            </span>
           </nav>
-          <h1>Bloc Jams</h1>
+          <h1>Rhythmix</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />
