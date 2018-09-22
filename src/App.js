@@ -10,15 +10,14 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <nav>
-           <span className="ion-ios-home">
-            <Link to='/'>Home</Link>
+          <nav class="nav">
+           <span className="home">
+            <Link to='/'>RHYTHMIX</Link>
            </span>
-           <span className="ion-ipod">
-             <Link to='/library'>Library</Link>
+           <span className="library">
+             <Link to='/library'>COLLECTION</Link>
            </span>
           </nav>
-          <h1>Rhythmix</h1>
         </header>
         <main>
           <Route exact path="/" component={Landing} />
